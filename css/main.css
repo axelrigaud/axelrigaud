@@ -97,11 +97,15 @@ h2{
 	background-size: 11px 12px;
 	background-color: transparent;
 	color:transparent !important;
+	background: rgba(0,0,0,.30) url('../img/play.svg') 55% 50% no-repeat;
+}
 
+@media (max-width: 600px){
+	.panel{
 
-background: rgba(0,0,0,.30) url('../img/play.svg') 55% 50% no-repeat;
-
-
+	width:auto;
+	float:none;
+}
 }
 /* clearfix */
   
