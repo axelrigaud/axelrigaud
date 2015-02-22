@@ -69,6 +69,7 @@ h2{
 	background: #FFF;
 	background-size:cover;
 	position: relative;
+	opacity: 0.9;
 }
 
 .clouds{
