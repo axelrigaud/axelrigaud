@@ -1,0 +1,73 @@
+html{
+	background:url(../img/office-opt.jpg) no-repeat center fixed;
+	background-size:cover;
+	font-family: 'Raleway', sans-serif;
+}
+
+#wrapper{
+	margin:4% auto;
+	text-align:center;
+}
+
+h1, h2, p, span{
+	background-color:white;
+	opacity:0.9;
+	padding:2%;
+}
+
+h1{
+	font-size:4em;
+	display:inline-block;	
+}
+
+#whatido{
+	margin-left:10%;
+}
+
+.panel{
+	margin:3% 5% 0 2%;
+	width:40%;
+	float:left;
+}
+
+a:link{
+	color:#008B8B;
+}
+
+a:visited{
+	color:#5F9EA0;
+}
+
+a:hover{
+	color:#DC143C;
+}
+
+a{
+	transition: all 0.2s;
+}
+
+
+p{
+	font-size:2em;
+
+	margin:10%;
+
+}
+
+h2{
+
+	font-size:3em;
+}
+/* clearfix */
+  
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+}
