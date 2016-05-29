@@ -1,0 +1,21 @@
+{
+  "name": "axelrigaud",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "axel rigaud <axel.rigaud@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4"
+  }
+}
