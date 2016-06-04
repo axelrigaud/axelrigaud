@@ -1,3 +1,6 @@
+$max-opacity: 0.95;
+$header-starting-position: -170px;
+
 html, body {
 	margin: 0;
 	width: 100%;
@@ -17,7 +20,7 @@ html {
 
 h1, h2, p, span{
 	background-color:white;
-	opacity:0.9;
+	opacity:$max-opacity;
 	padding:2%;
 	margin: 0;
 	font-weight: normal;
@@ -27,15 +30,17 @@ h1{
 	font-size:4em;
 	display:inline-block;
 	opacity: 0;
-	transform: translateY(-50px);
+	transform: translateY($header-starting-position);
+	margin: 10px;
 }
 
 #whatido{
 	margin-left:10%;
+	overflow: auto;
 }
 
 .panel{
-	margin:3% 5% 0 2%;
+	margin:0 5% 0 2%;
 	width:40%;
 	float:left;
 }
@@ -68,72 +73,16 @@ h2{
 	font-size:3em;
 }
 
-.smaller{
-	font-size:1em;
-}
-
-.video-container{
-	width: 150px;
-	height: 100px;
-	display: inline-block;
-	background: #FFF;
-	background-size:cover;
-	position: relative;
-	opacity: 0.9;
-}
-
-.clouds{
-	background: url('../img/clouds-thumb.jpg');
-}
-.between{
-	background: url('../img/between-thumb.jpg');
-}
-.howl{
-	background: url('../img/howl-thumb.jpg');
-}
-
-.video-link{
-	display:block;
-	border-radius: 50%;
-	top:0;
-	left:0;
-	right:0;
-	bottom: 0;
-	width: 40px;
-	margin:auto;
-	position: absolute;
-	height: 40px;
-	box-shadow: 0 0 0 3px #fff;
-	background-size: 11px 12px;
-	background-color: transparent;
-	color:transparent !important;
-	background: rgba(0,0,0,.30) url('../img/play.svg') 55% 50% no-repeat;
-}
-
 @media (max-width: 600px){
-	.panel{
-
-	width:auto;
-	float:none;
-}
-}
-/* clearfix */
-
-.group:before,
-.group:after {
-  content: "";
-  display: table;
-}
-.group:after {
-  clear: both;
-}
-.group {
-  zoom: 1;
+	.panel {
+	  width:auto;
+	  float:none;
+  }
 }
 
 /* animation */
 h1 {
-	transform: translateY(-145%);
+	transform: translateY($header-starting-position);
 }
 
 #left {
@@ -150,12 +99,12 @@ h1 {
 
 @keyframes appear-from-top {
 	from {
-		transform: translateY(-145%);
+		transform: translateY($header-starting-position);
 		opacity: 0;
 	}
 	to {
 		transform: translateY(0);
-		opacity: 1;
+		opacity: $max-opacity;
 	}
 }
 
@@ -166,7 +115,7 @@ h1 {
 	}
 	to {
 		transform: translateX(0);
-		opacity: 1;
+		opacity: $max-opacity;
 	}
 }
 
@@ -177,7 +126,7 @@ h1 {
 	}
 	to {
 		transform: translateX(0);
-		opacity: 1;
+		opacity: $max-opacity;
 	}
 }
 
@@ -188,14 +137,14 @@ h1 {
 	}
 	to {
 		transform: translateY(0);
-		opacity: 1;
+		opacity: $max-opacity;
 	}
 }
 
-$global-timing: .4s;
+$global-timing: 1s;
 
 .appear-from-top {
-	animation: appear-from-top $global-timing forwards;
+	animation: appear-from-top 2s forwards;
 }
 .appear-from-left {
 	animation: appear-from-left $global-timing forwards;
@@ -216,7 +165,7 @@ $global-timing: .4s;
 		transform: translateY(-50px);
 	}
 	to {
-		opacity: 1;
+		opacity: $max-opacity;
 		transform: translateY(0);;
 	}
 }

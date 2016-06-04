@@ -1,7 +1,9 @@
 $(document).ready(function(){
   $(window).on('load', function(){
-    $('#loader-wrapper').fadeOut();
-    $('h1').addClass('appear-from-top');
+    $('#loader-wrapper').fadeOut('slow',showHeader);
+    function showHeader() {
+      $('h1').addClass('appear-from-top');
+    }
     setTimeout(showParagraphs, 1000);
     function showParagraphs() {
       $('#whatido p').each(function(index, element){
